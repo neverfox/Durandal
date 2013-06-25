@@ -9,7 +9,8 @@
         'knockout.isotope': '../lib/isotope/knockout-isotope',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
         'jquery': '../lib/jquery/jquery-1.9.1',
-        'jquery.isotope': '../lib/isotope/jquery.isotope'
+        'jquery.isotope': '../lib/isotope/jquery.isotope',
+        'sigma': '../lib/sigma/sigma.min'
     },
     shim: {
         'bootstrap': {
@@ -18,6 +19,9 @@
         },
         'jquery.isotope': {
             deps: ['jquery']
+        },
+        'sigma': {
+            exports: 'sigma'
         }
     }
 });

@@ -11,7 +11,8 @@
                 { route: 'widgets',                     moduleId: 'widgets/index',          title: 'Widgets',           nav: true },
                 { route: 'master-detail',               moduleId: 'masterDetail/index',     title: 'Master Detail',     nav: true },
                 { route: 'knockout-samples*details',    moduleId: 'ko/index',               title: 'Knockout Samples',  nav: true, hash: '#knockout-samples' },
-                { route: 'isotope-demos*details',       moduleId: 'isotope/index',          title: 'Isotope Demos',     nav: true, hash: '#isotope-demos' }
+                { route: 'isotope-demos*details',       moduleId: 'isotope/index',          title: 'Isotope Demos',     nav: true, hash: '#isotope-demos' },
+                { route: 'sigma-demos*details',         moduleId: 'sigmaExample/index',     title: 'Sigma Example',     nav: true, hash: '#sigma-demos' },
             ]).buildNavigationModel();
             
             return router.activate();
