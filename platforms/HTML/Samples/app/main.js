@@ -4,14 +4,20 @@
         'durandal':'../lib/durandal/js',
         'plugins' : '../lib/durandal/js/plugins',
         'transitions' : '../lib/durandal/js/transitions',
-        'knockout': '../lib/knockout/knockout-2.2.1',
+        // 'knockout': '../lib/knockout/knockout-2.2.1',
+        'knockout': '../lib/isotope/knockout-2.2.0.debug',
+        'knockout.isotope': '../lib/isotope/knockout-isotope',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
-        'jquery': '../lib/jquery/jquery-1.9.1'
+        'jquery': '../lib/jquery/jquery-1.9.1',
+        'jquery.isotope': '../lib/isotope/jquery.isotope'
     },
     shim: {
         'bootstrap': {
             deps: ['jquery'],
             exports: '$.support.transition' // just picked one
+        },
+        'jquery.isotope': {
+            deps: ['jquery']
         }
     }
 });
