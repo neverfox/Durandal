@@ -1,4 +1,7 @@
-define(['knockout', 'knockout.isotope', 'jquery.isotope'], function (ko) {
+define(['durandal/composition', 'knockout', 'knockout.isotope', 'jquery.isotope'], function (compostion, ko) {
+
+  compostion.addBindingHandler('isotope', ko.bindingHandlers.isotope);
+
   var ViewModel = function () {
     var self = this;
     self.items = ko.observableArray([1, 2]);
