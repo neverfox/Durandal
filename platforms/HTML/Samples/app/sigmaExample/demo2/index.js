@@ -1,8 +1,9 @@
-﻿define(['durandal/system', 'knockout', 'sigma'], function (system, ko, sigma) {
+﻿define(['durandal/system', 'durandal/composition', 'knockout', 'sigma'], function (system, composition, ko, sigma) {
 
-    ko.bindingHandlers.sigma = {
+    composition.addBindingHandler('sigma', {
+        sigInst: null,
         init: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
-            var sigInst = sigma.init(element);
+            sigInst = sigma.init(element);
             sigInst.addNode('hello',{
               label: 'Hello',
               color: '#ff0000'
@@ -20,9 +21,9 @@
             });
         },
         update: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
-            sigma.draw();
+            sigInst.draw();
         }
-    };
+    });
 
     return {
         activate: function() {
