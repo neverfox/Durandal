@@ -12,6 +12,9 @@
         },
         attachedToParent: function (view, parent) {
             system.log('Lifecycle : attachedToParent');
+        },
+        compositionComplete: function (view) {
+            system.log('Lifecycle : compositionComplete');
             var sigInst = sigma.init(document.getElementById('sigma-example'));
             sigInst.addNode('hello',{
               label: 'Hello',
@@ -28,9 +31,6 @@
               minNodeSize: 1,
               maxNodeSize: 10
             }).draw();
-        },
-        compositionComplete: function (view) {
-            system.log('Lifecycle : compositionComplete');
         },
         detachedFromDocument: function (view) {
             system.log('Lifecycle : detachedFromDocument'); //Note: This won't be called as long as the composition system is set to cache views.
