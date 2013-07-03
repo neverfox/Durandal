@@ -4,14 +4,14 @@
         activate: function() {
             system.log('Lifecycle : activate');
         },
-        beforeBind: function () {
-            system.log('Lifecycle : beforeBind');
+        binding: function () {
+            system.log('Lifecycle : binding');
         },
-        afterBind: function () {
-            system.log('Lifecycle : afterBind');
+        bindingComplete: function () {
+            system.log('Lifecycle : bindingComplete');
         },
-        attachedToParent: function (view, parent) {
-            system.log('Lifecycle : attachedToParent');
+        attached: function (view, parent) {
+            system.log('Lifecycle : attached');
         },
         compositionComplete: function (view) {
             system.log('Lifecycle : compositionComplete');
@@ -32,8 +32,8 @@
               maxNodeSize: 10
             }).draw();
         },
-        detachedFromDocument: function (view) {
-            system.log('Lifecycle : detachedFromDocument'); //Note: This won't be called as long as the composition system is set to cache views.
+        detached: function (view) {
+            system.log('Lifecycle : detached'); //Note: This won't be called as long as the composition system is set to cache views.
         }
     };
 });
